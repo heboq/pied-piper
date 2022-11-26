@@ -1,0 +1,259 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px; /* Prevent in-page anchors overlaping by fixed page header */
+}
+
+/* Apply a natural box layout model to all 
+elements, but allowing components to change */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.17;
+}
+
+.container {
+  max-width: 1219px;
+  margin: 0 auto;
+  padding: 0 55px;
+
+  font-size: 0; /* remove whitespaces between inline-block elements */
+}
+
+/* "clearfix" for outdated float layout method */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Header
+   ========================================================== */
+
+header {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  height: 84px;
+
+  background-color: #007765;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__logo {
+  float: left; /* outdated layout method */
+  margin-top: 20px;
+}
+
+.header__nav {
+  float: right; /* outdated layout method */
+  margin-top: 28px;
+}
+
+.header__nav ol {
+  /* remove default ol spacing */
+  margin: 0;
+  padding: 0;
+
+  list-style: none; /* remove default ol style */
+}
+
+.header__nav-item {
+  float: left; /* outdated layout method */
+  margin-left: 8px;
+}
+
+.header__nav-item,
+.header__nav-item a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Main
+   ========================================================== */
+
+/* Jumbotron section 
+   ======================================= */
+
+.jumbotron {
+  margin-top: 84px;
+  padding: 160px 0;
+
+  background-image: url("../img/jumbotron/jumbotron.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  font-weight: 500;
+  font-size: 72px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* The Problem section 
+   ======================================= */
+
+.problem {
+  padding: 48px 0 92px;
+  background-color: #eeeeee;
+}
+
+.problem h2 {
+  font-weight: 500;
+  font-size: 64px;
+  text-align: center;
+  color: #007765;
+}
+
+.problem p {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+/* Hero section 
+   ======================================= */
+
+.hero {
+  padding: 128px 0;
+
+  background-image: url("../img/hero/hero.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .container {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* PPC section 
+   ======================================= */
+
+.ppc {
+  padding: 48px 0 92px;
+}
+
+.ppc h2 {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 64px;
+  text-align: center;
+  color: #007765;
+}
+
+.ppc__logo {
+  float: left;
+  padding-right: 48px;
+  padding-bottom: 35px;
+  box-sizing: content-box;
+}
+
+.ppc p {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+/* Team section 
+   ======================================= */
+
+.team {
+  padding: 48px 0 94px;
+  background-color: #eeeeee;
+}
+
+.team h2 {
+  margin-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 64px;
+  text-align: center;
+  color: #007765;
+}
+
+.members.normal-flow-layout--center {
+  text-align: center;
+}
+
+/* Comment to see normal flow layout */
+.members.flexbox-layout {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  display: inline-block;
+  margin: 0 0 30px;
+  padding: 24px 0 28px;
+}
+
+.team-member img {
+  display: block;
+  margin: 0 91px;
+}
+
+.team-member__name {
+  padding: 12px 0 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #007765;
+}
+
+.team-member__role {
+  padding: 0;
+
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+}
+
+/* Footer
+   ========================================================== */
+
+footer {
+  padding: 48px 285px 64px;
+
+  background: #333333;
+}
+
+.copyright {
+  display: block;
+
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Element selectors 
+   ======================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0;
+}
