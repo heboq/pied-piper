@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px; /* Prevent in-page anchors overlaping by fixed page header */
+  scroll-padding-top: 83px; /* Prevent in-page anchors overlaping by fixed page header */
 }
 
 /* Apply a natural box layout model to all 
