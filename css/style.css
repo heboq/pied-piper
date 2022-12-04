@@ -1,3 +1,5 @@
+/* Only float / normal flow layout used in entire project  */
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 83px; /* Prevent in-page anchors overlaping by fixed page header */
