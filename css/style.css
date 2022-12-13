@@ -1,12 +1,14 @@
-/* Only float / normal flow layout used in entire project  */
-
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 83px; /* Prevent in-page anchors overlaping by fixed page header */
+  /* Prevent in-page anchors overlaping
+     by fixed page header */
+  scroll-padding-top: 83px;
+  /* 10px */
+  font-size: 62.5%;
 }
 
 /* Apply a natural box layout model to all 
-elements, but allowing components to change */
+   elements, but allowing components to change */
 *,
 *::before,
 *::after {
@@ -20,18 +22,9 @@ body {
 }
 
 .container {
-  max-width: 1219px;
+  max-width: 121.9rem;
   margin: 0 auto;
-  padding: 0 55px;
-
-  font-size: 0; /* remove whitespaces between inline-block elements */
-}
-
-/* "clearfix" for outdated float layout method */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+  padding: 0 5.5rem;
 }
 
 /* Header
@@ -42,38 +35,41 @@ header {
   top: 0;
 
   width: 100%;
-  height: 84px;
 
   background-color: #007765;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 84px;
+}
+
 .header__logo {
-  float: left; /* outdated layout method */
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .header__nav {
-  float: right; /* outdated layout method */
-  margin-top: 28px;
+  /* margin-top: 28px; */
 }
 
 .header__nav ol {
-  /* remove default ol spacing */
+  display: flex;
   margin: 0;
   padding: 0;
-
-  list-style: none; /* remove default ol style */
+  list-style: none;
 }
 
 .header__nav-item {
-  float: left; /* outdated layout method */
-  margin-left: 8px;
+  margin: 0 4px;
+  font-size: 2.4rem;
 }
 
 .header__nav-item,
 .header__nav-item a {
-  font-size: 24px;
   text-decoration: none;
   color: #ffffff;
 }
@@ -87,7 +83,6 @@ header {
 .jumbotron {
   margin-top: 84px;
   padding: 160px 0;
-
   background-image: url("../img/jumbotron/jumbotron.png");
   background-position: center;
   background-size: cover;
@@ -95,7 +90,7 @@ header {
 
 .jumbotron h1 {
   font-weight: 500;
-  font-size: 72px;
+  font-size: 7.2rem;
   text-align: center;
   color: #ffffff;
 }
@@ -109,15 +104,16 @@ header {
 }
 
 .problem h2 {
+  margin-bottom: 16px;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 6.4rem;
   text-align: center;
   color: #007765;
 }
 
 .problem p {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 /* Hero section 
@@ -125,7 +121,6 @@ header {
 
 .hero {
   padding: 128px 0;
-
   background-image: url("../img/hero/hero.png");
   background-position: center;
   background-size: cover;
@@ -134,7 +129,7 @@ header {
 .hero .container {
   font-style: italic;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 4.8rem;
   text-align: center;
   color: #ffffff;
 }
@@ -148,9 +143,8 @@ header {
 
 .ppc h2 {
   margin-bottom: 16px;
-
   font-weight: 500;
-  font-size: 64px;
+  font-size: 6.4rem;
   text-align: center;
   color: #007765;
 }
@@ -164,7 +158,7 @@ header {
 
 .ppc p {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 /* Team section 
@@ -177,26 +171,19 @@ header {
 
 .team h2 {
   margin-bottom: 32px;
-
   font-weight: 500;
-  font-size: 64px;
+  font-size: 6.4rem;
   text-align: center;
   color: #007765;
 }
 
-.members.normal-flow-layout--center {
-  text-align: center;
-}
-
-/* Comment to see normal flow layout */
-.members.flexbox-layout {
+.members {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .team-member {
-  display: inline-block;
   margin: 0 0 30px;
   padding: 24px 0 28px;
 }
@@ -210,7 +197,7 @@ header {
   padding: 12px 0 0;
 
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2.4rem;
   text-align: center;
   color: #007765;
 }
@@ -220,7 +207,7 @@ header {
 
   font-style: italic;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
   color: #000000;
 }
@@ -229,16 +216,20 @@ header {
    ========================================================== */
 
 footer {
-  padding: 48px 285px 64px;
+  padding: 4.8rem 27.89vw;
 
   background: #333333;
+}
+
+footer .container {
+  padding: 0;
 }
 
 .copyright {
   display: block;
 
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
   color: #ffffff;
 }
@@ -258,4 +249,25 @@ h6 {
 p {
   margin: 0;
   padding: 20px 0;
+}
+
+/* Media
+   ========================================================== */
+
+@media (max-width: 992px) {
+  .team-member {
+    /* уменьшать расстояние */
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 320px) {
+  .header__logo {
+    display: none;
+  }
 }
