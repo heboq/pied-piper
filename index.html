@@ -27,21 +27,26 @@
           <img alt="logo" src="img/header/logo.svg" width="184" height="45" style="display: block" />
         </a>
 
-        <nav class="header__nav">
-          <ol>
-            <li class="header__nav-item">
-              <a href="#the-problem">the problem</a>
-            </li>
-            <li class="header__nav-item">|</li>
-            <li class="header__nav-item">
-              <a href="#ppc">PiedPiperCoin</a>
-            </li>
-            <li class="header__nav-item">|</li>
-            <li class="header__nav-item">
-              <a href="#the-team">the team</a>
-            </li>
-          </ol>
-        </nav>
+        <div class="header__menu menu">
+          <div class="menu__icon">
+            <span></span>
+          </div>
+          <nav class="header__nav">
+            <ol>
+              <li class="header__nav-item">
+                <a href="#the-problem">the problem</a>
+              </li>
+              <li class="header__nav-item">|</li>
+              <li class="header__nav-item">
+                <a href="#ppc">PiedPiperCoin</a>
+              </li>
+              <li class="header__nav-item">|</li>
+              <li class="header__nav-item">
+                <a href="#the-team">the team</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
       </div>
       <!-- /.container -->
     </header>
@@ -56,7 +61,7 @@
       <section class="problem" id="the-problem">
         <div class="container">
           <h2>The Problem</h2>
-          <p style="padding-top: 0">
+          <p>
             Beneath the flashy homepages of your favorite sites lurk Hooli™ and other evil corporations out to hoard and
             sell your most personal data.
           </p>
@@ -85,11 +90,13 @@
       <section class="ppc" id="ppc">
         <div class="container">
           <h2>Introducing PiedPiperCoin</h2>
-          <img class="ppc__logo" alt="PiedPiperCoin" src="img/ppc/logo.png" width="115" height="115" />
-          <p style="padding-top: 0">
-            Pied Piper's new internet is built <em>for users, by users</em>.<br />
-            You supply the storage, compute, and networking resources that power our entire decentralized web.
-          </p>
+          <div class="ppc__first-paragraph">
+            <img class="ppc__logo" alt="PiedPiperCoin" src="img/ppc/logo.png" />
+            <p>
+              Pied Piper's new internet is built <em>for users, by users</em>.<br />
+              You supply the storage, compute, and networking resources that power our entire decentralized web.
+            </p>
+          </div>
           <p>
             Now there's a way to give credit where credit is due. Compute credit, that is! The more you share your
             device resources, the more PiedPiperCoin you receive.
@@ -165,4 +172,5 @@
       </div>
     </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>
